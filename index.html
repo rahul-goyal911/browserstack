@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     
+  </head>
+  <body>
+  </body>
+  <script>
+
+    const socket = new WebSocket("ws://localhost:8000")
+    socket.onopen = event => {
+        socket.send("Hello, World!");
+    }
+    socket.onmessage = event => {
+        console.log(event.data);
+    }
+  </script>
+</html>
